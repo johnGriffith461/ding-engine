@@ -1,0 +1,26 @@
+{
+  "name": "ding-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ding Harness 的引擎与 SDK（ding-engine-core / ding-engine）",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-sdk.mjs",
+    "verify": "node scripts/build-sdk.mjs && node scripts/verify-sdk.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "4.23.15",
+    "typescript": "^5.0.0",
+    "vitest": "5.0.3"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "4.0.79",
+    "@ai-sdk/google": "4.0.95",
+    "@ai-sdk/openai-compatible": "3.0.67",
+    "@ai-sdk/provider": "4.0.26",
+    "ai": "7.0.137",
+    "zod": "4.6.6"
+  }
+}

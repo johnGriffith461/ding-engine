@@ -1,0 +1,12 @@
+{"seq":1,"at":1792108641548,"requestId":"turn-1792108641548-em26m5","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"写个文件"}],"toolPolicy":"全部允许","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108641567,"requestId":"turn-1792108641548-em26m5","type":"tool-call","toolCallId":"call_0_0","toolName":"write_file","input":{"path":"{{work}}/out.txt","content":"内容"}}
+
+{"seq":3,"at":1792108641637,"requestId":"turn-1792108641548-em26m5","type":"tool-result","toolCallId":"call_0_0","toolName":"write_file","output":{"ok":true,"line":"新建了「out.txt」（2 字）","path":"{{work}}\\out.txt","chars":2,"bytes":6,"created":true}}
+
+{"seq":4,"at":1792108641657,"requestId":"turn-1792108641548-em26m5","type":"text","text":"写好了。"}
+
+{"seq":5,"at":1792108641736,"requestId":"turn-1792108641548-em26m5","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":180}}
+
+{"type":"tool-result","requestId":"cut-off",
+

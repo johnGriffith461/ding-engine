@@ -1,0 +1,12 @@
+{"seq":1,"at":1792108641995,"requestId":"turn-1792108641995-0skgn6","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"写个文件"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108642077,"requestId":"turn-1792108641995-0skgn6","type":"tool-call","toolCallId":"call_0_0","toolName":"write_file","input":{"path":"{{work}}/gated.txt","content":"x"}}
+
+{"seq":3,"at":1792108642089,"requestId":"turn-1792108641995-0skgn6","type":"tool-result","toolCallId":"call_0_0","toolName":"write_file","output":{"pending":true,"notice":"已把这次「write_file」交给用户确认（当前档位：按需确认），**还没有执行**。请不要重试，直接把需要确认的事告诉用户。"}}
+
+{"seq":4,"at":1792108642166,"requestId":"turn-1792108641995-0skgn6","type":"text","text":"要你确认。"}
+
+{"seq":5,"at":1792108642180,"requestId":"turn-1792108641995-0skgn6","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":112}}
+
+{"type":"tool-result","requestId":"cut-off",
+

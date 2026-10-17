@@ -1,0 +1,12 @@
+{"seq":1,"at":1792108642407,"requestId":"turn-1792108642407-31o1jj","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"读一个不存在的文件"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108642430,"requestId":"turn-1792108642407-31o1jj","type":"tool-call","toolCallId":"call_0_0","toolName":"read_file","input":{"path":"{{work}}/nope.txt"}}
+
+{"seq":3,"at":1792108642493,"requestId":"turn-1792108642407-31o1jj","type":"tool-result","toolCallId":"call_0_0","toolName":"read_file","error":"文件不存在，或者读不了（检查一下路径）"}
+
+{"seq":4,"at":1792108642513,"requestId":"turn-1792108642407-31o1jj","type":"text","text":"它不在。"}
+
+{"seq":5,"at":1792108642573,"requestId":"turn-1792108642407-31o1jj","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":150}}
+
+{"type":"tool-result","requestId":"cut-off",
+

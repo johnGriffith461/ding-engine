@@ -1,0 +1,6 @@
+{"seq":1,"at":1792108644828,"requestId":"turn-1792108644828-xj8ka5","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"（空回）"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108644910,"requestId":"turn-1792108644828-xj8ka5","type":"done","usage":{"inputTokens":100,"outputTokens":20,"noCacheTokens":100,"cacheReadTokens":0,"elapsedMs":5}}
+
+{"type":"tool-result","requestId":"cut-off",
+

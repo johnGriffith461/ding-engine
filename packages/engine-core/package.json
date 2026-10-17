@@ -1,0 +1,33 @@
+{
+  "name": "ding-engine-core",
+  "version": "0.1.0",
+  "description": "Ding Harness 的最小嵌入面：事件模型 + 主循环（无 IO —— 不需要文件系统就能跑一轮）",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "./dist/packages/engine-core/src/index.js",
+  "types": "./dist/packages/engine-core/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/packages/engine-core/src/index.d.ts",
+      "default": "./dist/engine/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-sdk.mjs engine-core"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "4.0.79",
+    "@ai-sdk/google": "4.0.95",
+    "@ai-sdk/openai-compatible": "3.0.67",
+    "@ai-sdk/provider": "4.0.26",
+    "ai": "7.0.137",
+    "zod": "4.6.6"
+  }
+}

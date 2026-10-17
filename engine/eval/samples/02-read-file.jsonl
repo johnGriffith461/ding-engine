@@ -1,0 +1,12 @@
+{"seq":1,"at":1792108641143,"requestId":"turn-1792108641143-ya45dl","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"看看 note.txt"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108641179,"requestId":"turn-1792108641143-ya45dl","type":"tool-call","toolCallId":"call_0_0","toolName":"read_file","input":{"path":"{{work}}/note.txt"}}
+
+{"seq":3,"at":1792108641269,"requestId":"turn-1792108641143-ya45dl","type":"tool-result","toolCallId":"call_0_0","toolName":"read_file","output":{"ok":true,"line":"读了「note.txt」（10 字）","text":"备忘：明天十点开会\n","chars":10,"truncated":false}}
+
+{"seq":4,"at":1792108641299,"requestId":"turn-1792108641143-ya45dl","type":"text","text":"写着明天十点开会。"}
+
+{"seq":5,"at":1792108641365,"requestId":"turn-1792108641143-ya45dl","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":212}}
+
+{"type":"tool-result","requestId":"cut-off",
+

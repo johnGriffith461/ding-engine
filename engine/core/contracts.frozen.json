@@ -1,0 +1,104 @@
+{
+  "__note": [
+    "六项契约的冻结面（V5-1 3.10b 的契约 diff 门的数据）。",
+    "规矩：清单里的每一项都必须带着它**来历的那份 ADR 文件名**，以及**当时的那个值**；",
+    "改契约（加/改/删冻结面）要：① 先在 ADR/ 里加一份 ADR（或修订既有的那一份）说明为什么；",
+    "② 再更新这份清单（新项标上那份 ADR，值抄成新值）。守卫在 src/contractFreeze.test.ts，",
+    "它**逐字比对值** —— 改一个字都会红（2026-10-17 变异实证过：第一版只比键，加一格字段不红）。",
+    "⚠️ 这份文件只许**跟着 ADR 一起动** —— 它是门，不是文档。"
+  ],
+  "entries": {
+    "schema.version": {
+      "value": "6",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "schema.migrations": {
+      "value": "v1:基线（sessions / events 两表 + 索引） | v2:正文列与回填（审计 P101 / P136） | v3:事件 actor 维度（C5） | v4:会话归属（C1） | v5:会话分叉来源（C6/V5-2 2.5） | v6:画布事件表 + 审批索引表（C6 3.9a / C3 3.7b）",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "schema.tables": {
+      "value": "sessions,events,schema_version,events_fts",
+      "adr": "0005-schema-版本化迁移链.md"
+    },
+    "record.request.keys": {
+      "value": "actor,at,messages,model,provider,requestId,seq,type",
+      "adr": "0006-actor-维度兼容策略.md"
+    },
+    "record.text.keys": {
+      "value": "actor,at,requestId,seq,text,type",
+      "adr": "0006-actor-维度兼容策略.md"
+    },
+    "record.approval.keys": {
+      "value": "actor,approved,approvers,at,decidedBy,line,name,seq,toolCallId,type",
+      "adr": "0008-审批裁决权归属与流转.md"
+    },
+    "record.types": {
+      "value": "approval,approval-grant,delegation,done,error,request,text,tool-call,tool-result",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "session.owner": {
+      "value": "sessions.owner (TEXT NOT NULL DEFAULT 'local')",
+      "adr": "0010-契约冻结收口.md"
+    },
+    "session.summary.fields": {
+      "value": "bytes,conversationId,forkedFrom,owner,sessionId,title,updatedAt",
+      "adr": "0010-契约冻结收口.md"
+    },
+    "policy.confirmModes": {
+      "value": "全部允许,按需确认,每步确认",
+      "adr": "0007-两轴权限矩阵.md"
+    },
+    "policy.memberRoles": {
+      "value": "owner,admin,specialist,viewer",
+      "adr": "0007-两轴权限矩阵.md"
+    },
+    "policy.matrix": {
+      "value": "owner:run/run/ask | admin:run/run/ask | specialist:run/run/ask | viewer:run/deny/deny",
+      "adr": "0007-两轴权限矩阵.md"
+    },
+    "gates.defaultApprover": {
+      "value": "local",
+      "adr": "0008-审批裁决权归属与流转.md"
+    },
+    "gates.decisionCodes": {
+      "value": "stale,not-approver",
+      "adr": "0008-审批裁决权归属与流转.md"
+    },
+    "memory.domains": {
+      "value": "private,team",
+      "adr": "0010-契约冻结收口.md"
+    },
+    "canvas.eventTypes": {
+      "value": "canvas.open,node.create,node.update,node.delete,edge.create,edge.delete,marker.add,fork",
+      "adr": "0009-画布语义契约.md"
+    },
+    "canvas.surface": {
+      "value": "read:run,query:run,create:ask,link:ask,generate:ask",
+      "adr": "0009-画布语义契约.md"
+    },
+    "record.approval-grant.keys": {
+      "value": "actor,approvers,at,by,line,seq,target,toolCallId,type",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "schema.tables.v6": {
+      "value": "canvases,canvas_events,approvals（+ idx_canvas_events_canvas / idx_approvals_state / idx_sessions_owner）",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "gates.approversFor": {
+      "value": "pending 载荷的 approvers + 之后每条 approval-grant 的 approvers（后写覆盖）",
+      "adr": "0015-画布事件表与审批索引表.md"
+    },
+    "sync.frame.id": {
+      "value": "sync#<会话 id>#<FNV-1a(canonical(记录去掉 seq))>（内容寻址）",
+      "adr": "0017-同步客户端与合并语义.md"
+    },
+    "sync.merge.rules": {
+      "value": "跳过内容相同的（本地已有）+ 跳过形状不认的（如实计数）+ at 用记录自己的",
+      "adr": "0017-同步客户端与合并语义.md"
+    },
+    "sync.sealed.split": {
+      "value": "内容类（request/text/tool-call/tool-result/done/error/delegation）封；控制类（approval/approval-grant + CONTROL_EVENT_TYPES）明文",
+      "adr": "0018-同步内容层的加密.md"
+    }
+  }
+}
