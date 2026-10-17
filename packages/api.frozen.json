@@ -1,0 +1,550 @@
+{
+  "note": "SDK 公开面的冻结清单（V5-4 任务 4.2）—— 这两份名单就是「外面能用的东西」。对账的门在 src/sdkApiFreeze.test.ts：加名字 / 删名字 / 改种类（值 ↔ 类型）都会红，于是没有一次公开面变更能是**无名**的。改法（口径见 RELEASE.md）：加 → 补进本清单（minor）；删或改签名 → 先加 ADR，再 major + 迁移指南。",
+  "process": {
+    "additive": "补进本清单 + CHANGELOG（minor）",
+    "breaking": "ADR + major + 迁移指南（RELEASE.md 的兼容窗口那一节）"
+  },
+  "version": "0.1.0",
+  "packages": {
+    "ding-engine-core": {
+      "entry": "packages/engine-core/src/index.ts",
+      "exports": [
+        {
+          "name": "Actor",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ActorKind",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "actorOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "AppendOptions",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "applyEvent",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "approversOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "authorizeApprover",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "canDecide",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "chatSessionId",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "cliSessionId",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "CONFIRM_MODES",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ConfirmMode",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "conversationIdOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "conversationTitle",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "createEngine",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "decideForMember",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "DecisionCheck",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "DEFAULT_APPROVER",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "diffSnapshot",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "emptyTurn",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "Engine",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EnginePorts",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EngineRunRequest",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EngineRunResult",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "envSecret",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ExecutorContext",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "finishTurn",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "fold",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "HealthStore",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "HooksPort",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "injectableTools",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "isChatSessionId",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "isPendingOutput",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LedgerEntry",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ledgerOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LedgerTotal",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LEGACY_ACTOR",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LoadOptions",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LOCAL_USER",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LogInput",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "logLine",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "LogRecord",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "MAIN_AGENT",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "MEMBER_ROLES",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "MemberDecision",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "MemberRole",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ModelInfo",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "noopHealth",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "noopHooks",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "normalizeActor",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "normalizeConfirmMode",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "normalizeRoles",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "parseLogLine",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "PendingApproval",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "projectTurn",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ResumedSession",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "resumeSession",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "rolesOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "rollup",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SecretPort",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SessionKind",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SessionStore",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "Snapshot",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SnapshotDiff",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "snapshotOf",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "splitTurns",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SYSTEM_ACTOR",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "taskSessionId",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ToolExecutor",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "TurnChunk",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "TurnState",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "TurnView",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "Verdict",
+          "kind": "type",
+          "since": "0.1.0"
+        }
+      ]
+    },
+    "ding-engine": {
+      "entry": "packages/engine/src/index.ts",
+      "exports": [
+        {
+          "name": "allProviders",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "buildEngine",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "buildToolSet",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "BuiltEngine",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "CLI_TOOLS",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "CONFIRM_MODES",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ConfirmMode",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "createCliExecutor",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "createEngine",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "createSqliteSessionStore",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "createToolRegistry",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "credentialsPath",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "Engine",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EnginePorts",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EngineRunRequest",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "EngineRunResult",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "firstAvailableProvider",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "getProvider",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "invalidateCredentialCache",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "listProviders",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "loadEnabledPlugins",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "MakeTools",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "normalizeConfirmMode",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "pluginHooks",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "pluginPaths",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "pluginToolEntries",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "readLedger",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "resolveSecret",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "runHooks",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SessionStore",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "SessionSummary",
+          "kind": "value",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ToolEntry",
+          "kind": "type",
+          "since": "0.1.0"
+        },
+        {
+          "name": "ToolRegistry",
+          "kind": "type",
+          "since": "0.1.0"
+        }
+      ]
+    }
+  }
+}

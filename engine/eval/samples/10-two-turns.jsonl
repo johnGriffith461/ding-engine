@@ -1,0 +1,14 @@
+{"seq":1,"at":1792108644423,"requestId":"turn-1792108644423-39pv0j","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"我叫阿洁"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108644476,"requestId":"turn-1792108644423-39pv0j","type":"text","text":"记住了。"}
+
+{"seq":3,"at":1792108644490,"requestId":"turn-1792108644423-39pv0j","type":"done","usage":{"inputTokens":100,"outputTokens":20,"noCacheTokens":100,"cacheReadTokens":0,"elapsedMs":21}}
+
+{"seq":4,"at":1792108644556,"requestId":"turn-1792108644556-6n51l6","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"我叫什么"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":5,"at":1792108644575,"requestId":"turn-1792108644556-6n51l6","type":"text","text":"你叫阿洁。"}
+
+{"seq":6,"at":1792108644636,"requestId":"turn-1792108644556-6n51l6","type":"done","usage":{"inputTokens":110,"outputTokens":21,"noCacheTokens":110,"cacheReadTokens":0,"elapsedMs":67}}
+
+{"type":"tool-result","requestId":"cut-off",
+

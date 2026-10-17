@@ -1,0 +1,34 @@
+{
+  "name": "ding-engine",
+  "version": "0.1.0",
+  "description": "Ding Harness 的完整能力面：引擎 + SQLite 存储 + 工具执行体 + 凭据库 + 插件（Node 侧）",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "./dist/packages/engine/src/index.js",
+  "types": "./dist/packages/engine/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/packages/engine/src/index.d.ts",
+      "default": "./dist/packages/engine/src/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-sdk.mjs engine"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "4.0.79",
+    "@ai-sdk/google": "4.0.95",
+    "@ai-sdk/openai-compatible": "3.0.67",
+    "@ai-sdk/provider": "4.0.26",
+    "ding-engine-core": "0.1.0",
+    "ai": "7.0.137",
+    "zod": "4.6.6"
+  }
+}

@@ -1,0 +1,12 @@
+{"seq":1,"at":1792108642766,"requestId":"turn-1792108642766-mn0sr4","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"跑个命令"}],"toolPolicy":"全部允许","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108642840,"requestId":"turn-1792108642766-mn0sr4","type":"tool-call","toolCallId":"call_0_0","toolName":"run_command","input":{"command":"echo hello","timeout":10000}}
+
+{"seq":3,"at":1792108642960,"requestId":"turn-1792108642766-mn0sr4","type":"tool-result","toolCallId":"call_0_0","toolName":"run_command","output":{"ok":true,"line":"跑了「echo hello」（退出码 0）","exitCode":0,"cwd":"{{work}}","truncated":false,"timedOut":false,"text":"hello"}}
+
+{"seq":4,"at":1792108643004,"requestId":"turn-1792108642766-mn0sr4","type":"text","text":"跑完了。"}
+
+{"seq":5,"at":1792108643078,"requestId":"turn-1792108642766-mn0sr4","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":245}}
+
+{"type":"tool-result","requestId":"cut-off",
+

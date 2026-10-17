@@ -1,0 +1,20 @@
+{"seq":1,"at":1792108643598,"requestId":"turn-1792108643598-dhxoj0","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"派两个人"}],"toolPolicy":"全部允许","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108643614,"requestId":"turn-1792108643598-dhxoj0","type":"tool-call","toolCallId":"call_0_0","toolName":"spawn_agents","input":{"tasks":[{"agent":"researcher","task":"甲"},{"agent":"writer","task":"乙"}]}}
+
+{"seq":3,"at":1792108643626,"requestId":"turn-1792108643598-dhxoj0","type":"delegation","delegationId":"dlg-0-ip6sf6","agent":"researcher","task":"甲","status":"started"}
+
+{"seq":4,"at":1792108643691,"requestId":"turn-1792108643598-dhxoj0","type":"delegation","delegationId":"dlg-1-pmp76g","agent":"writer","task":"乙","status":"started"}
+
+{"seq":5,"at":1792108643713,"requestId":"turn-1792108643598-dhxoj0","type":"delegation","delegationId":"dlg-0-ip6sf6","agent":"researcher","task":"甲","status":"finished","ok":true,"summary":"（子智能体收尾）","steps":1}
+
+{"seq":6,"at":1792108643781,"requestId":"turn-1792108643598-dhxoj0","type":"delegation","delegationId":"dlg-1-pmp76g","agent":"writer","task":"乙","status":"finished","ok":true,"summary":"（子智能体收尾）","steps":1}
+
+{"seq":7,"at":1792108643794,"requestId":"turn-1792108643598-dhxoj0","type":"tool-result","toolCallId":"call_0_0","toolName":"spawn_agents","output":{"ok":true,"summary":"【researcher】　[120 tokens]\n（子智能体收尾）\n\n【writer】　[120 tokens]\n（子智能体收尾）","members":[{"agent":"researcher","task":"甲","ok":true,"summary":"（子智能体收尾）","steps":1,"toolCalls":[],"blocked":[],"usage":{"inputTokens":100,"outputTokens":20}},{"agent":"writer","task":"乙","ok":true,"summary":"（子智能体收尾）","steps":1,"toolCalls":[],"blocked":[],"usage":{"inputTokens":100,"outputTokens":20}}],"usage":{"inputTokens":200,"outputTokens":40},"blocked":[],"failed":0}}
+
+{"seq":8,"at":1792108643872,"requestId":"turn-1792108643598-dhxoj0","type":"text","text":"两份都回来了。"}
+
+{"seq":9,"at":1792108643879,"requestId":"turn-1792108643598-dhxoj0","type":"done","usage":{"inputTokens":210,"outputTokens":41,"noCacheTokens":210,"cacheReadTokens":0,"elapsedMs":272}}
+
+{"type":"tool-result","requestId":"cut-off",
+

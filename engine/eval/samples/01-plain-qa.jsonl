@@ -1,0 +1,8 @@
+{"seq":1,"at":1792108640833,"requestId":"turn-1792108640832-sgf15q","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"帮我想个变量名"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108640896,"requestId":"turn-1792108640832-sgf15q","type":"text","text":"叫 `retryCount` 怎么样。"}
+
+{"seq":3,"at":1792108640934,"requestId":"turn-1792108640832-sgf15q","type":"done","usage":{"inputTokens":100,"outputTokens":20,"noCacheTokens":100,"cacheReadTokens":0,"elapsedMs":89}}
+
+{"type":"tool-result","requestId":"cut-off",
+

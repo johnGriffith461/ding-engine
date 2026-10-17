@@ -1,0 +1,11 @@
+{
+  "rate": 100,
+  "total": 9,
+  "byCategory": {
+    "纯对话": {
+      "total": 9,
+      "passed": 9
+    }
+  },
+  "generatedAt": "2026-10-16T15:25:56.080Z"
+}

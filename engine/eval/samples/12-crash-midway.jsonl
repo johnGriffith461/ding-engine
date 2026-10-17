@@ -1,0 +1,10 @@
+{"seq":1,"at":1792108645119,"requestId":"turn-1792108645119-psdcvp","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"上游会断"}],"toolPolicy":"按需确认","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108645199,"requestId":"turn-1792108645119-psdcvp","type":"tool-call","toolCallId":"call_0_0","toolName":"list_dir","input":{"path":"{{work}}","depth":1}}
+
+{"seq":3,"at":1792108645205,"requestId":"turn-1792108645119-psdcvp","type":"tool-result","toolCallId":"call_0_0","toolName":"list_dir","output":{"ok":true,"line":"看了「{{work}}」：1 条","entries":1,"truncated":false,"text":"f  note.txt (28B)"}}
+
+{"seq":4,"at":1792108651262,"requestId":"turn-1792108645119-psdcvp","type":"error","message":"Failed after 3 attempts. Last error: AI_APICallError: Cannot connect to API: other side closed"}
+
+{"type":"tool-result","requestId":"cut-off",
+

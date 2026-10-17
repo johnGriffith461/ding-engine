@@ -1,0 +1,16 @@
+{"seq":1,"at":1792108643263,"requestId":"turn-1792108643263-m8vrt4","type":"request","provider":"strata","model":"deepseek-flash","messages":[{"role":"user","content":"先看再写"}],"toolPolicy":"全部允许","useTools":true,"tools":["spawn_agents","spawn_agent","list_files","list_dir","search_files","read_file","write_file","edit_file","run_command"]}
+
+{"seq":2,"at":1792108643325,"requestId":"turn-1792108643263-m8vrt4","type":"tool-call","toolCallId":"call_0_0","toolName":"list_dir","input":{"path":"{{work}}","depth":1}}
+
+{"seq":3,"at":1792108643335,"requestId":"turn-1792108643263-m8vrt4","type":"tool-result","toolCallId":"call_0_0","toolName":"list_dir","output":{"ok":true,"line":"看了「{{work}}」：1 条","entries":1,"truncated":false,"text":"f  note.txt (28B)"}}
+
+{"seq":4,"at":1792108643402,"requestId":"turn-1792108643263-m8vrt4","type":"tool-call","toolCallId":"call_1_0","toolName":"write_file","input":{"path":"{{work}}/two.txt","content":"二"}}
+
+{"seq":5,"at":1792108643410,"requestId":"turn-1792108643263-m8vrt4","type":"tool-result","toolCallId":"call_1_0","toolName":"write_file","output":{"ok":true,"line":"新建了「two.txt」（1 字）","path":"{{work}}\\two.txt","chars":1,"bytes":3,"created":true}}
+
+{"seq":6,"at":1792108643429,"requestId":"turn-1792108643263-m8vrt4","type":"text","text":"齐了。"}
+
+{"seq":7,"at":1792108643441,"requestId":"turn-1792108643263-m8vrt4","type":"done","usage":{"inputTokens":330,"outputTokens":63,"noCacheTokens":330,"cacheReadTokens":0,"elapsedMs":122}}
+
+{"type":"tool-result","requestId":"cut-off",
+
